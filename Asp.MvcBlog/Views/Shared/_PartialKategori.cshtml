@@ -1,0 +1,17 @@
+﻿@using Asp.MvcBlog.Manager
+@using Asp.MvcBlog.Models
+
+
+@{
+    KategoriManager km = new KategoriManager();
+    List<Kategori> list = km.GetKategori();
+}
+<p class="lead  col-sm-offset-3" style="color:red">KONULAR</p>
+<div class="list-group">
+
+    @foreach (Kategori kat in list)
+    {
+        <a href="/Home/ByKategori/@kat.Id" title="@kat.Aciklama" class="list-group-item"><span class="glyphicon glyphicon-arrow-right" style="color:red"></span> @kat.Baslik</a>
+    }
+</div>
+

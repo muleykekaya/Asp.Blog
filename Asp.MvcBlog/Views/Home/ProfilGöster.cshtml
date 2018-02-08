@@ -1,0 +1,31 @@
+﻿@using Asp.MvcBlog.Models
+@model Uye
+@{
+    ViewBag.Title = "Profiliniz";
+}
+
+<div class="container">
+    <div class="row">
+        <h2>@ViewBag.Title </h2>
+        <hr />
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+            <img src="~/Resim/@Model.ProfilResmi" class="img-circle" width="128" height="128" />
+        </div>
+        <div class="col-md-10">
+            <h3>@(Model.Ad + " " + Model.Soyad)</h3>
+            <br />
+
+
+
+            <h5><b>@Html.DisplayNameFor(model=>model.KullaniciAdi):</b>@Model.KullaniciAdi </h5>
+           
+
+            <h5><b>@Html.DisplayNameFor(model =>model.Email) : </b>@Model.Email</h5>
+            <br />
+            <h5><a href="/Home/ProfilGüncelle">Profil Güncelle </a></h5><hr />
+            <h5><a href="/Home/ProfilSil">Profil Sil </a></h5>
+        </div>
+    </div>
+</div>

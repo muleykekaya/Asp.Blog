@@ -1,0 +1,40 @@
+﻿@using Asp.MvcBlog.Models.ViewModal
+@model Giris
+
+@{
+    ViewBag.Title = "KayitTamam";
+}
+
+
+<link href="~/Content/Giris.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 col-md-4 col-md-offset-4 outlined">
+            <h1 class="text-center login-title" style="color:red">Yönlendiriliyorsunuz..</h1>
+            <div class="account-wall">
+                @*<form class='form-signin' action="{% url 'login' %}" method='POST'>*@
+                <!--{% csrf_token %}-->
+                <h2><span class="glyphicon glyphicon-ok"></span>&nbsp;&nbsp; Kaydınız Tamamlandı</h2>
+                <hr />
+                <p class="text-justify">Lütfen Bekleyiniz.. </p>
+
+                <span class="clearfix"></span>
+                @*</form>*@
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+        $(function () {
+            $("footer").hide();
+        });
+
+        $(function () {
+            setTimeout(function(){window.location="/Home/GirisYap"},2000)
+        });
+    </script>
+
